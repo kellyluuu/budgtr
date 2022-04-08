@@ -5,17 +5,18 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT
-const budgets = require('./models/budget.js')
+const budget = require('./models/budget.js')
 
 /* -------------------------------------------------------------------------- */
 /*                          Delcare Middleware                                */
 /* -------------------------------------------------------------------------- */
 app.use(express.urlencoded({extended: false}))
+app.use(express.static('public'))
 /* -------------------------------------------------------------------------- */
 /*                          Declare routes and router                         */
 /* -------------------------------------------------------------------------- */
 app.get('/budgets',(req,res)=>{
-    res.render("index.ejs",{allBudgets: budgets})
+    res.render("index.ejs",{allBudgets: budget})
 })
 
 app.get('/budgets/new',(req,res)=>{
@@ -23,7 +24,7 @@ app.get('/budgets/new',(req,res)=>{
 })
 
 app.get('/budgets/:index',(req,res)=>{
-    res.render('show.ejs',{budget: budgets[req.params.is]})
+    res.render('show.ejs',{budget: budget[req.params.index]})
 })
 
 app.post('/budgets', (req,res)=>{
