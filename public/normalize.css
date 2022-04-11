@@ -21,6 +21,23 @@ body {
   padding: 30px;
 }
 
+#bank-red{
+  background-color: rgb(238, 144, 144)
+}
+
+#bank-green{
+  background-color: rgb(175, 231, 175)
+}
+
+#bank-gray{
+  background-color: rgba(248, 248, 248, 0.614)
+}
+
+
+.bank{
+  text-align: right;
+}
+
 /* HTML5 display definitions
    ========================================================================== */
 

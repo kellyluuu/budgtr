@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
-    <title>NEW</title>
+    <title>NEW BUDGET</title>
 </head>
 <body>
-    <H1>NEW</H1>
+    <div>
+        <h1>New Budget</h1>
+        
+        <form action="/budgets" method="post">
+            <div>
+                <input type="date" placeholder="date" name="date" required><br>
+                <input type="input" placeholder="Budget Name" name="name" required><br>
+                <input type="input" placeholder="From" name="from" required><br>
+                <input type="number" placeholder="amount" name="amount"required><br>
+                <input type="input" placeholder="tags" name="tags"required><br>
+            </div>
+            <input class="button-primary" type="submit" value="Submit">
+        </form>
+    </div>
     
 </body>
 </html>

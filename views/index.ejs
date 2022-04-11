@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Budgtr ALL</h1>
+        <h1>Budget ALL</h1>
+        <h5 class="bank" id="bank-<%=totalColor%>">Account Balance: <span id="total">$<%=bank%></span></h5>
         </div>
         <table class="u-full-width">
             <thead>
@@ -25,12 +26,12 @@
                 <% for(let i =0; i<allBudgets.length;i++){ %>
               <tr>
                 <td><%= allBudgets[i].date %></td>
-                <td><a href="/budgets/<%=i %>"><%= allBudgets[i].name %></a></td>
+                <td><a href="/budgets/<%=i%>"><%= allBudgets[i].name %></a></td>
                 <td><%= allBudgets[i].amount %></td>
               </tr>
-                <%} %> 
+                <%}%>
             </tbody>
           </table>
-    
+          <a class="button button-primary" href="/budget/new">New Budget</a>
 </body>
 </html>
