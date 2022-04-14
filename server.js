@@ -1,7 +1,6 @@
 /* -------------------------------------------------------------------------- */
 /*                 SET UP - Import deps and create app object                 */
 /* -------------------------------------------------------------------------- */
-const e = require('express')
 const express = require('express')
 const app = express()
 require('dotenv').config()
@@ -21,7 +20,9 @@ app.use(express.static('public'))
 /* -------------------------------------------------------------------------- */
 
 
-
+app.get("/",(req,res)=>{
+    res.send('<html><body><a href="/budgets">Budget</a> </body></html>')
+})
 
 //const sumWithInitial = allAmt.reduce((previousValue, currentValue) => previousValue + currentValue, initialValue);
 app.get('/budgets',(req,res)=>{
@@ -73,4 +74,4 @@ app.post('/budgets', (req,res)=>{
 /* -------------------------------------------------------------------------- */
 /*                               server listener                              */
 /* -------------------------------------------------------------------------- */
-app.listen(PORT, ()=>console.log(`Budget app is listening on port ${PORT}`))
+app.listen(PORT, ()=>console.log(`(╯°□°)╯ Budget live on port ${PORT}`))
